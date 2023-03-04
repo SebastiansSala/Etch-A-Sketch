@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ededed;
+    color: #333;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.options-container{
+    display: flex;
+    margin-top: 150px;
+    margin-right: 100px;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.button{
+    padding: 10px 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all .2s linear;
+}
+
+.button:focus{
+    background-color: #333;
+    color:white; 
+}
+
+.button:hover, .colorRoullete:hover{
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+.colorRoullete{
+    width: 80px;
+    height: 80px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-self: center;
+}
+
+.container{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.container h1{
+    margin-bottom: 50px;
+    font-size: 90px;
+}
+
+.grid-container{
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.grid-item{
+    border: 1px solid white;
+}
