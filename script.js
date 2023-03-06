@@ -1,11 +1,5 @@
-const showLength = document.querySelector('#grid-size');
 const gridValue = document.querySelector('#value');
-const length = document.querySelector('#grid-size').value;
-
-
-showLength.addEventListener('input', (event) => {
-    gridValue.innerHTML = event.target.value + ' x ' + event.target.value;
-});
+const length = window.prompt('Tamano de los pixeles')
 
 function createGrid(length){
   grid.style.gridTemplateColumns = `repeat(${length}, 1fr)`;
@@ -31,6 +25,19 @@ rainbowBtn.addEventListener('click', () => {
     element.addEventListener('mouseover', (elem) => {
       const newColor = generateRandomColor();
       elem.target.style.backgroundColor = newColor;
+    });    
+  });
+});
+
+const shadeBtn = document.querySelector('#shade');
+shadeBtn.addEventListener('click', () => {
+  const currentItem = document.querySelectorAll('.grid-item');
+  currentItem.forEach(element => {
+    let count = 0;
+    element.addEventListener('mouseover', (elem) => {
+      count += 1;
+      elem.target.style.backgroundColor = '#000000';
+      elem.target.style.opacity = count*.1;
     });    
   });
 });
